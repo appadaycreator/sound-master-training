@@ -1,1 +1,231 @@
- 
+/* Responsive Styles */
+
+/* XS - Extra Small Devices */
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .features-grid,
+    .recommendations-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .training-options {
+        flex-direction: column;
+    }
+    
+    .hero-section {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    
+    .piano-keyboard {
+        height: 120px;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        padding: var(--space-md);
+    }
+    
+    .share-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SM - Small Devices */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .features-grid,
+    .recommendations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modal-content {
+        margin: 15% auto;
+    }
+}
+
+/* MD - Medium Devices */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .features-grid,
+    .recommendations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* LG - Large Devices and up */
+@media (min-width: 992px) {
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        gap: var(--space-xl);
+    }
+    
+    .hero-image {
+        margin-top: 0;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+    }
+    
+    .main-nav {
+        display: block;
+    }
+    
+    .hamburger-menu {
+        display: none;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .training-controls {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .training-options {
+        width: auto;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-links {
+        flex-grow: 1;
+        justify-content: flex-end;
+        margin-left: var(--space-xl);
+    }
+}
+
+/* Sidebar Toggle for responsive design */
+@media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: var(--sidebar-width);
+        height: calc(100% - var(--header-height));
+        transform: translateX(0);
+        transition: transform var(--transition-normal);
+        box-shadow: none;
+        border-right: var(--border-width) solid var(--border-color);
+    }
+    
+    .sidebar-header {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: var(--sidebar-width);
+    }
+    
+    .header-inner,
+    .footer-content,
+    .footer-bottom {
+        padding-left: calc(var(--sidebar-width) + var(--space-md));
+    }
+    
+    body.sidebar-closed .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    body.sidebar-closed .main-content,
+    body.sidebar-closed .header-inner,
+    body.sidebar-closed .footer-content,
+    body.sidebar-closed .footer-bottom {
+        margin-left: 0;
+        padding-left: var(--space-md);
+    }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 991.98px) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .header {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .sidebar {
+        padding-top: calc(env(safe-area-inset-top) + var(--space-md));
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .sidebar,
+    .footer,
+    .modal,
+    .pwa-prompt,
+    .hero-section,
+    .features-section,
+    .recommendations-section,
+    .share-results,
+    .header-controls {
+        display: none;
+    }
+    
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .training-section {
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --text-color: #f5f5f5;
+        --text-light: #bbbbbb;
+        --bg-color: #121212;
+        --bg-light: #1e1e1e;
+        --bg-dark: #2a2a2a;
+        --border-color: #444444;
+    }
+    
+    body.theme-auto .white-key {
+        background-color: #2a2a2a;
+        border-color: #444444;
+    }
+    
+    body.theme-auto .black-key {
+        background-color: #000000;
+    }
+    
+    body.theme-auto .piano-key:hover {
+        background-color: var(--primary-light);
+    }
+}
