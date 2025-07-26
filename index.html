@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サウンドマスター | 音感トレーニング・アプリ</title>
+    <meta name="description" content="音感を楽しく鍛える「サウンドマスター」。ドレミから和音まで、音楽家のための聴覚トレーニングゲーム。相対音感を効率的に向上させます。">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- OGP Settings -->
+    <meta property="og:title" content="サウンドマスター | 音感トレーニング・アプリ">
+    <meta property="og:description" content="音感を楽しく鍛える「サウンドマスター」。ドレミから和音まで、音楽家のための聴覚トレーニングゲーム。相対音感を効率的に向上させます。">
+    <meta property="og:image" content="https://appadaycreator.github.io/sound-master-training/assets/images/ogp.jpg">
+    <meta property="og:url" content="https://appadaycreator.github.io/sound-master-training/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3c64b1">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header id="header" class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <svg class="logo-svg" width="40" height="40" viewBox="0 0 40 40">
+                        <path d="M20,0 C31.046,0 40,8.954 40,20 C40,31.046 31.046,40 20,40 C8.954,40 0,31.046 0,20 C0,8.954 8.954,0 20,0 Z" fill="#3c64b1"/>
+                        <path d="M20,5 L20,35 M10,15 C15,12 25,12 30,15 M10,25 C15,28 25,28 30,25" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span>サウンドマスター</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">ホーム</a></li>
+                    <li><a href="how-to-use.html">使い方</a></li>
+                    <li><a href="lp.html">特徴</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button id="langToggle" class="btn-icon" aria-label="言語切替">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z" fill="#333"/>
+                    </svg>
+                </button>
+                <button id="fontSizeToggle" class="btn-icon" aria-label="文字サイズ変更">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M5.12,14L7.5,7.67L9.87,14M6.5,5L1,19H3.24L4.33,16H10.67L11.76,19H14L8.5,5H6.5M18,17L23,12L18,7V10H15V14H18V17Z" fill="#333"/>
+                    </svg>
+                </button>
+                <div id="hamburger" class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>メニュー</h3>
+            <button class="close-sidebar" id="closeSidebar">×</button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="how-to-use.html">使い方</a></li>
+                <li><a href="lp.html">特徴</a></li>
+                <li><a href="terms.html">利用規約・免責事項</a></li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-settings">
+            <h4>設定</h4>
+            <div class="setting-group">
+                <span>言語:</span>
+                <select id="languageSelect">
+                    <option value="ja" selected>日本語</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <span>文字サイズ:</span>
+                <div class="font-size-options">
+                    <button data-size="xs">極小</button>
+                    <button data-size="sm">小</button>
+                    <button data-size="md" class="active">標準</button>
+                    <button data-size="lg">大</button>
+                    <button data-size="xl">特大</button>
+                </div>
+            </div>
+            <div class="setting-group">
+                <span>テーマ:</span>
+                <select id="themeSelect">
+                    <option value="light" selected>ライト</option>
+                    <option value="dark">ダーク</option>
+                    <option value="blue">ブルー</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>音感トレーニング<br><span class="highlight">サウンドマスター</span></h1>
+                <p class="hero-subtitle">あなたの耳を鍛える、音楽家のための聴覚トレーニングゲーム</p>
+                <div class="hero-buttons">
+                    <button id="startTraining" class="btn btn-primary">トレーニングを始める</button>
+                    <a href="how-to-use.html" class="btn btn-secondary">使い方を見る</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <svg class="wave-animation" width="300" height="200" viewBox="0 0 300 200">
+                    <path d="M0,100 C30,70 50,130 80,100 C110,70 130,130 160,100 C190,70 210,130 240,100 C270,70 290,130 300,100" stroke="#3c64b1" stroke-width="3" fill="none"/>
+                    <circle class="note-circle" cx="80" cy="100" r="8" fill="#3c64b1"/>
+                    <circle class="note-circle" cx="160" cy="100" r="8" fill="#3c64b1"/>
+                    <circle class="note-circle" cx="240" cy="100" r="8" fill="#3c64b1"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="training-section" id="trainingApp">
+            <h2>トレーニングモード</h2>
+            <div class="training-container">
+                <div class="training-controls">
+                    <button id="playSound" class="btn btn-primary">音を再生</button>
+                    <div class="training-options">
+                        <select id="trainingMode">
+                            <option value="single-note">単音当て</option>
+                            <option value="interval">音程当て</option>
+                            <option value="chord">和音判別</option>
+                            <option value="melody">メロディ記憶</option>
+                            <option value="rhythm" disabled>リズム模倣（近日公開）</option>
+                        </select>
+                        <select id="difficultyLevel">
+                            <option value="beginner">初級</option>
+                            <option value="intermediate">中級</option>
+                            <option value="advanced">上級</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="answersContainer" class="answers-container">
+                    <!-- 単音モード用のキーボード -->
+                    <div id="pianoKeyboard" class="piano-keyboard">
+                        <div class="piano-key white-key" data-note="C">ド</div>
+                        <div class="piano-key black-key" data-note="C#">ド#</div>
+                        <div class="piano-key white-key" data-note="D">レ</div>
+                        <div class="piano-key black-key" data-note="D#">レ#</div>
+                        <div class="piano-key white-key" data-note="E">ミ</div>
+                        <div class="piano-key white-key" data-note="F">ファ</div>
+                        <div class="piano-key black-key" data-note="F#">ファ#</div>
+                        <div class="piano-key white-key" data-note="G">ソ</div>
+                        <div class="piano-key black-key" data-note="G#">ソ#</div>
+                        <div class="piano-key white-key" data-note="A">ラ</div>
+                        <div class="piano-key black-key" data-note="A#">ラ#</div>
+                        <div class="piano-key white-key" data-note="B">シ</div>
+                    </div>
+                    
+                    <!-- その他のモード用のボタン（和音、音程など） -->
+                    <div id="chordButtons" class="answer-buttons" style="display: none;">
+                        <!-- 和音モード用のボタン -->
+                    </div>
+                    <div id="intervalButtons" class="answer-buttons" style="display: none;">
+                        <!-- 音程モード用のボタン -->
+                    </div>
+                </div>
+                
+                <div class="feedback-container">
+                    <div id="resultFeedback" class="result-feedback"></div>
+                    <div class="score-display">
+                        <span>スコア: </span>
+                        <span id="currentScore">0</span>
+                    </div>
+                </div>
+                
+                <div class="statistics-summary">
+                    <h3>トレーニング統計</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="accuracyRate">0%</div>
+                            <div class="stat-label">正答率</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="streakCount">0</div>
+                            <div class="stat-label">連続正解</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalCompleted">0</div>
+                            <div class="stat-label">総回答数</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="levelRank">-</div>
+                            <div class="stat-label">現在ランク</div>
+                        </div>
+                    </div>
+                    <div class="share-results">
+                        <button id="shareResults" class="btn btn-small">結果をシェア</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>主な機能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8.01,12 6,14.01 6,16.5C6,18.99 8.01,21 10.5,21C12.81,21 14.7,19.25 14.95,17H15V12H21V7H12V3Z" fill="#3c64b1"/>
+                        </svg>
+                    </div>
+                    <h3>単音トレーニング</h3>
+                    <p>ド～シまでの単音を聞き分けるトレーニング。初心者からスタートできます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8.01,12 6,14.01 6,16.5C6,18.99 8.01,21 10.5,21C12.81,21 14.7,19.25 14.95,17H15V12H19V10H15V8H19V6H15V4H19V3H12Z" fill="#3c64b1"/>
+                        </svg>
+                    </div>
+                    <h3>音程判別</h3>
+                    <p>2度～8度の音程を聞き分けるトレーニング。和声感を鍛えます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path d="M21,3V15.5A3.5,3.5 0 0,1 17.5,19A3.5,3.5 0 0,1 14,15.5A3.5,3.5 0 0,1 17.5,12C18.04,12 18.55,12.12 19,12.34V6.47L9,8.6V17.5A3.5,3.5 0 0,1 5.5,21A3.5,3.5 0 0,1 2,17.5A3.5,3.5 0 0,1 5.5,14C6.04,14 6.55,14.12 7,14.34V6L21,3Z" fill="#3c64b1"/>
+                        </svg>
+                    </div>
+                    <h3>和音判別</h3>
+                    <p>メジャーコード・マイナーコードなどの和音を聞き分けるトレーニング。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M15,12C17.67,12 20,14.33 20,17C20,19.67 17.67,22 15,22C12.33,22 10,19.67 10,17C10,14.33 12.33,12 15,12M15,14A3,3 0 0,0 12,17A3,3 0 0,0 15,20A3,3 0 0,0 18,17A3,3 0 0,0 15,14Z" fill="#3c64b1"/>
+                        </svg>
+                    </div>
+                    <h3>メロディ記憶</h3>
+                    <p>短いメロディを聴いて再現するトレーニング。音楽的記憶力を鍛えます。</p>
+                </div>
+            </div>
+            <div class="more-features">
+                <a href="lp.html" class="btn btn-outline">すべての機能を見る</a>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>あなたの成長記録</h2>
+            <div class="stats-chart">
+                <div id="progressChart" class="progress-chart">
+                    <p>ログインすると統計が表示されます</p>
+                </div>
+            </div>
+            <p class="stats-note">トレーニングを継続して、あなたの音感の成長を記録しましょう。</p>
+        </section>
+
+        <section class="recommendations-section">
+            <h2>おすすめ教材・機材</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <div class="recommendation-image placeholder-image"></div>
+                    <h3>音感トレーニング教本</h3>
+                    <p>初心者から上級者まで、段階的に音感を鍛えられる教材です。</p>
+                    <a href="#" class="affiliate-link">詳細を見る</a>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-image placeholder-image"></div>
+                    <h3>高音質ヘッドホン</h3>
+                    <p>トレーニングに最適な、細かい音の違いが分かるヘッドホンです。</p>
+                    <a href="#" class="affiliate-link">詳細を見る</a>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-image placeholder-image"></div>
+                    <h3>音楽理論解説書</h3>
+                    <p>和声学の基礎から学べる、音楽理論の決定版。</p>
+                    <a href="#" class="affiliate-link">詳細を見る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <path d="M20,0 C31.046,0 40,8.954 40,20 C40,31.046 31.046,40 20,40 C8.954,40 0,31.046 0,20 C0,8.954 8.954,0 20,0 Z" fill="#3c64b1"/>
+                    <path d="M20,5 L20,35 M10,15 C15,12 25,12 30,15 M10,25 C15,28 25,28 30,25" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span>サウンドマスター</span>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="how-to-use.html">使い方</a></li>
+                        <li><a href="lp.html">特徴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>サポート</h4>
+                    <ul>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="terms.html">利用規約・免責事項</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ソーシャル</h4>
+                    <ul class="social-links">
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" fill="#888"/>
+                                </svg>
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" fill="#888"/>
+                                </svg>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" fill="#888"/>
+                                </svg>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 サウンドマスター All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="fontSizeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>文字サイズの変更</h3>
+            <div class="font-size-options">
+                <button data-size="xs">極小</button>
+                <button data-size="sm">小</button>
+                <button data-size="md" class="active">標準</button>
+                <button data-size="lg">大</button>
+                <button data-size="xl">特大</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PWA Install Prompt -->
+    <div id="pwaInstallPrompt" class="pwa-prompt">
+        <div class="pwa-prompt-content">
+            <h3>アプリをインストール</h3>
+            <p>ホーム画面に追加して、オフラインでも使用できます</p>
+            <div class="pwa-buttons">
+                <button id="pwaInstallButton" class="btn btn-primary">インストール</button>
+                <button id="pwaDismissButton" class="btn btn-secondary">後で</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SNS Share Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>結果をシェアする</h3>
+            <p id="shareText">サウンドマスターで音感トレーニング中！今日のスコア: 85点 #音感トレーニング #サウンドマスター</p>
+            <div class="share-buttons">
+                <button id="twitterShare" class="btn-social twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" fill="white"/>
+                    </svg>
+                    Twitter
+                </button>
+                <button id="facebookShare" class="btn-social facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" fill="white"/>
+                    </svg>
+                    Facebook
+                </button>
+                <button id="lineShare" class="btn-social line">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19.11,17.205L19.116,17.195L19.12,17.2L19.125,17.19L19.122,17.196L19.126,17.193L19.123,17.196L19.128,17.192L19.125,17.196L19.129,17.193L19.125,17.196L19.128,17.194L19.125,17.196L19.13,17.192L19.125,17.197L19.129,17.194L19.124,17.198L19.129,17.195L19.122,17.2L19.128,17.196L19.118,17.204L19.126,17.198L19.113,17.208L19.123,17.202L19.106,17.214L19.12,17.206L19.098,17.223L19.116,17.212L19.07,17.246L19.105,17.222L19.017,17.283L19.097,17.227L18.965,17.329L19.081,17.247L18.91,17.375L19.04,17.288L18.834,17.444L18.991,17.334L18.714,17.55L18.968,17.369L18.565,17.684L18.936,17.41L18.193,18.023L18.86,17.516L17.461,18.683L18.777,17.628L15.91,20L18.855,17.658L15,21L18.937,17.688L15.062,21L19.013,17.714L15.118,21L19.085,17.741L15.171,21L19.153,17.766L15.222,21L19.217,17.789L15.27,21L19.278,17.812L15.316,21L19.337,17.834L15.36,21L19.395,17.855L15.403,21L19.449,17.875L15.444,21L19.503,17.895L15.483,21L19.555,17.915L15.52,21L19.606,17.934L15.556,21L19.655,17.952L15.591,21L19.704,17.971L15.624,21L19.752,17.989L15.657,21L19.8,18.006L15.688,21L19.848,18.024L15.719,21L19.896,18.041L15.749,21L19.943,18.058L15.778,21L19.99,18.075L15.807,21L20.037,18.092L15.835,21L20.085,18.11L15.863,21L20.133,18.128L15.891,21L20.182,18.145L15.919,21L20.232,18.163L15.948,21L20.283,18.182L15.977,21L20.335,18.2L16.007,21L20.388,18.219L16.038,21L20.443,18.238L16.07,21L20.5,18.258L16.103,21L20.559,18.279L16.139,21L20.621,18.3L16.178,21L20.686,18.323L16.219,21L20.754,18.346L16.264,21L20.828,18.371L16.313,21L20.906,18.397L16.367,21L20.992,18.426L16.427,21L21.086,18.458L16.494,21L21.192,18.492L16.577,21L21.318,18.535L16.667,21L21.833,18.679L16.941,21L22.167,18.79L17.176,21L22.5,18.904L17.417,21L22.833,19.026L17.673,21L23.167,19.154L17.945,21L23.5,19.29L18.251,21L23.833,19.44L18.632,21L24.167,19.61L19.127,21L24.5,19.801L19.797,21L24.833,20.036L20.801,21L24.5,20.25L21.5,21L24,20.5L22,21L23,20.75L22.5,21L22.75,20.875L22.75,21L22,21L22,20.75L22,21L21,21L21,20.5L21,21L20,21L20,20.25L20,21L19,21L19,20.001L19,21L18,21L18.001,19.751L18.001,21L17.001,21L17.002,19.501L17.002,21L16.002,21L16.003,19.252L16.003,21L15.003,21L15.004,19.002L15.004,21L14.004,21L14.005,18.752L14.005,21L13.005,21L13.006,18.502L13.006,21L12.006,21L12.006,18.252L12.007,21L11.007,21L11.008,18.003L11.008,21L10.008,21L10.009,17.753L10.009,21L9.009,21L9.01,17.503L9.01,21L8.01,21L8.011,17.253L8.011,21L7.011,21L7.012,17.003L7.012,21L6.012,21L6.013,16.754L6.013,21L5.013,21L5.014,16.504L5.014,21L4.014,21L4.015,16.254L4.015,21L3.015,21L3.016,16.004L3.016,21L2.016,21L2.016,15.754L2.017,21L1.017,21L1.018,15.504L1.018,21L0.018,21L0.019,15.255L0.019,21L0.019,15.005L0.019,15L1,15C1,16.105 2.895,17 5,17S9,16.105 9,15C9,16.105 10.895,17 13,17S17,16.105 17,15C17,16.105 18.895,17 21,17A3.66,3.66 0 0,0 24,15.03V8A4,4 0 0,0 20,4H4A4,4 0 0,0 0,8V15C0,13.895 1.895,13 4,13S8,13.895 8,15C8,13.895 9.895,13 12,13S16,13.895 16,15C16,13.895 17.895,13 20,13A4.18,4.18 0 0,1 24,15.03C23.4,13.804 22.426,13 21,13C18.64,13 16,14.12 16,16C16,14.12 13.36,13 11,13S6,14.12 6,16C6,14.12 3.36,13 1,13C1.56,13.62 2,15 2,16C2,16.94 1.66,20 0,20C1.42,20 8,20 8,16C8,20 14.58,20 16,20C16.58,20 23.16,20 23.16,16C23.16,16.4822 22.8378,19.0799 21.7547,19.6402C21.794,19.632 22.9213,19.1672 23.1626,17.3721C22.786,19.4682 21.636,19.949 19.116,19.949V19.949C18.478,19.949 19.309,19.13 19.11,17.205Z" fill="white"/>
+                    </svg>
+                    LINE
+                </button>
+            </div>
+            <div class="share-link">
+                <input type="text" id="shareLink" readonly>
+                <button id="copyLink" class="btn btn-small">コピー</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/audio-engine.js"></script>
+    <script src="assets/js/training.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/storage.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
