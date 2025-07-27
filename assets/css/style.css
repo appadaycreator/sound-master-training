@@ -615,33 +615,62 @@ select {
     margin: 0 auto;
     border-radius: var(--border-radius-sm);
     overflow: hidden;
+    background-color: #f0f0f0;
 }
 
 .piano-key {
-    flex: 1;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 10px;
     cursor: pointer;
     transition: all var(--transition-fast);
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
 }
 
 .white-key {
     background-color: white;
-    border: 1px solid var(--border-color);
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
     height: 100%;
+    width: calc(100% / 7);
     z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .black-key {
-    background-color: #333;
+    background-color: #222;
     color: white;
-    height: 60%;
-    width: 60%;
-    margin-left: -30%;
-    margin-right: -30%;
+    border-radius: 0 0 4px 4px;
+    height: 65%;
+    width: calc(100% / 12);
+    position: absolute;
     z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-size: 12px;
+}
+
+/* 黒鍵の正確な位置調整 */
+.black-key[data-note="C#"] {
+    left: calc(100% / 7 * 0.7);
+}
+
+.black-key[data-note="D#"] {
+    left: calc(100% / 7 * 1.7);
+}
+
+.black-key[data-note="F#"] {
+    left: calc(100% / 7 * 3.7);
+}
+
+.black-key[data-note="G#"] {
+    left: calc(100% / 7 * 4.7);
+}
+
+.black-key[data-note="A#"] {
+    left: calc(100% / 7 * 5.7);
 }
 
 .piano-key:hover {

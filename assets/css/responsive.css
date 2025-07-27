@@ -28,6 +28,14 @@
         height: 120px;
     }
     
+    .piano-key {
+        font-size: 12px;
+    }
+    
+    .black-key {
+        font-size: 10px;
+    }
+    
     .modal-content {
         margin: 20% auto;
         padding: var(--space-md);
@@ -216,16 +224,23 @@
         --border-color: #444444;
     }
     
+    body.theme-auto .piano-keyboard {
+        background-color: #1e1e1e;
+    }
+    
     body.theme-auto .white-key {
-        background-color: #2a2a2a;
-        border-color: #444444;
+        background-color: #f0f0f0;
+        border-color: #ccc;
+        color: #333;
     }
     
     body.theme-auto .black-key {
-        background-color: #000000;
+        background-color: #111;
+        color: #f0f0f0;
     }
     
     body.theme-auto .piano-key:hover {
         background-color: var(--primary-light);
+        color: white;
     }
 }
