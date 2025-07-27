@@ -1,1 +1,36 @@
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://appadaycreator.github.io/sound-master-training/</loc>
+        <lastmod>2025-07-26</lastmod>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://appadaycreator.github.io/sound-master-training/?lang=ja"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://appadaycreator.github.io/sound-master-training/?lang=en"/>
+    </url>
+    <url>
+        <loc>https://appadaycreator.github.io/sound-master-training/lp.html</loc>
+        <lastmod>2025-07-26</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://appadaycreator.github.io/sound-master-training/how-to-use.html</loc>
+        <lastmod>2025-07-26</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://appadaycreator.github.io/sound-master-training/terms.html</loc>
+        <lastmod>2025-07-26</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://appadaycreator.github.io/sound-master-training/privacy.html</loc>
+        <lastmod>2025-07-26</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://appadaycreator.github.io/sound-master-training/contact.html</loc>
+        <lastmod>2025-07-26</lastmod>
+        <priority>0.7</priority>
+    </url>
+</urlset>

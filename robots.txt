@@ -1,1 +1,7 @@
- 
+User-agent: *
+Allow: /
+Disallow: /tests/
+Disallow: /*.js$
+Disallow: /assets/js/
+
+Sitemap: https://appadaycreator.github.io/sound-master-training/sitemap.xml
