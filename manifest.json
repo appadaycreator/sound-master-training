@@ -15,20 +15,7 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
-    },
-    {
-      "src": "assets/images/ogp.jpg",
-      "sizes": "512x512",
-      "type": "image/jpeg"
     }
   ],
-  "categories": ["education", "music", "entertainment"],
-  "screenshots": [
-    {
-      "src": "assets/images/ogp.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "form_factor": "wide"
-    }
-  ]
+  "categories": ["education", "music", "entertainment"]
 } 

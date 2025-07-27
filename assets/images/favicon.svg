@@ -1,1 +1,14 @@
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="16" cy="16" r="16" fill="#3c64b1"/>
+  <g fill="white">
+    <!-- 音符の棒 -->
+    <rect x="19" y="8" width="2" height="12" rx="1"/>
+    <!-- 音符の頭 -->
+    <ellipse cx="17" cy="20" rx="3" ry="2" transform="rotate(-20 17 20)"/>
+    <!-- 装飾的な音波 -->
+    <path d="M8 12 Q10 10, 12 12 Q10 14, 8 12" fill-opacity="0.8"/>
+    <path d="M8 16 Q10 14, 12 16 Q10 18, 8 16" fill-opacity="0.6"/>
+    <path d="M8 20 Q10 18, 12 20 Q10 22, 8 20" fill-opacity="0.4"/>
+  </g>
+</svg> 

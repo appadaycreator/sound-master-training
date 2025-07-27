@@ -1,1 +1,45 @@
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景グラデーション -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3c64b1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7bc8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- メインタイトル -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="white">
+    サウンドマスター
+  </text>
+  
+  <!-- サブタイトル -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" fill="white" opacity="0.9">
+    音感トレーニング
+  </text>
+  
+  <!-- 音符アイコン -->
+  <g transform="translate(500, 350)">
+    <circle cx="50" cy="50" r="50" fill="white" opacity="0.2"/>
+    <g fill="white">
+      <rect x="69" y="30" width="6" height="36" rx="3"/>
+      <ellipse cx="63" cy="66" rx="9" ry="6" transform="rotate(-20 63 66)"/>
+    </g>
+  </g>
+  
+  <g transform="translate(650, 350)">
+    <circle cx="50" cy="50" r="50" fill="white" opacity="0.2"/>
+    <g fill="white">
+      <rect x="69" y="25" width="6" height="40" rx="3"/>
+      <ellipse cx="63" cy="65" rx="9" ry="6" transform="rotate(-20 63 65)"/>
+      <path d="M75 25 Q85 20, 90 30 Q80 35, 75 30" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- 説明文 -->
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="white" opacity="0.8">
+    ドレミから和音まで、音楽家のための聴覚トレーニングゲーム
+  </text>
+</svg> 
